@@ -1,0 +1,79 @@
+/* Style for the admin-container */
+.admin-container {
+  max-width: 500px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add some padding to the container */
+  background-color: #f0f0f0; /* Add a background color */
+  border-radius: 5px; /* Add rounded corners to the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  margin-top:100px;
+  border: 1px solid black;
+}
+
+/* Style for the heading */
+.admin-container h2 {
+  font-size: 24px; /* Set the font size for the heading */
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+/* Style for the form */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for labels */
+.admin-form label {
+  margin-bottom: 10px; /* Add space below each label */
+  font-size: 18px; /* Set the font size for labels */
+}
+
+/* Style for text inputs and textareas */
+/* Style for input fields with a border */
+.input-border {
+  border: 1px solid #ccc; /* Add a border */
+  padding: 10px; /* Add some padding */
+  font-size: 16px; /* Set the font size for input fields */
+  border-radius: 5px; /* Add rounded corners to inputs */
+  width: 100%; /* Take up the full width of the container */
+  box-sizing: border-box; /* Include padding and border in the width */
+  transition: border-color 0.3s ease; /* Add a smooth border transition on hover and focus */
+}
+
+/* Style for input fields on hover */
+.input-border:hover {
+  border-color: #007bff; /* Change the border color on hover */
+}
+
+/* Style for input fields on focus */
+.input-border:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #007bff; /* Change the border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow on focus */
+}
+
+
+/* Style for the submit button */
+.admin-form button[type="submit"] {
+  background-color: #007bff; /* Set the background color */
+  color: white; /* Set the text color */
+  font-size: 18px; /* Set the font size for the button text */
+  padding: 15px 15px; /* Add padding to the button (reduce width) */
+  border: none; /* Remove the button border */
+  border-radius: 5px; /* Add rounded corners to the button */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Add a smooth background color transition on hover */
+  width:90px;
+  float: center;
+}
+
+/* Style for the submit button on hover */
+.admin-form button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+
+/* Style for the submit button on hover */
+.admin-form button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}

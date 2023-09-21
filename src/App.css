@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+/* navbar style */
+.stylenav{
+  background-color: black;
+  color: rgb(201, 213, 224);
+  font-family: 'Times';
+  text-align: left;
+  font-size: 24px;
+  padding: 10px;
+  border: 5px solid #dee567;
+  /* justify-content: space-between;  */
+
+}
+/* Define a CSS class for the logout button */
+.button-logout {
+  background-color: #ff5733; /* Set the background color */
+  color: white; /* Set the text color */
+  padding: 10px 20px; /* Add padding to the button */
+  border: none; /* Remove the button border */
+  border-radius: 5px; /* Add rounded corners to the button */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  justify-content: space-between; 
+  margin-left: 1200px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Define a hover effect for the button */
+.button-logout:hover {
+  background-color: #e6451f; /* Change the background color on hover */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* mainpage style */
+.sidemainclass{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); 
+ 
+}
+.side2{
+  grid-column: span 2; 
+  background-color: rgb(16, 6, 6); 
+  height: 100vh; 
+  padding-left: 2px;
+  border: 2px solid rgb(238, 235, 232);
+}
+.side3{
+  grid-column: span 8; 
+    /* background-color:aqua; */
+    height: 100vh; 
+    padding-left: 2px;
+}
+ 
+
+/* sidebar style */
+.side {
+  /* background-color: #333; */
+  color:black;
+  padding: 20px;
+  min-width: 150px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.side ul {
+  list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+.side li {
+  margin-bottom: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a{
+  text-decoration: none;
+  color: aliceblue;
 }

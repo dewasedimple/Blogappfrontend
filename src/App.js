@@ -1,24 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import Admin from "./pages/admin";
+import Blog from "./pages/blog";
+import "./App.css";
+import Mainpage from "./components/mainpage";
+import { BrowserRouter ,Routes,Route,Navigate} from "react-router-dom";
+import Login from "./pages/Login";
+import Signup from "./pages/signup";
+import React, { useState } from "react";
+
 
 function App() {
+  const [showLogin, setShowLogin] = useState(true);
+const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+const toggleSignup = () => {
+  setShowLogin(!showLogin);
+
+};
+
+ const handleLogin=()=>{
+  setIsAuthenticated(true);
+ };
+ const handleLogout=()=>{
+  setIsAuthenticated(false);
+ };
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+  <Route
+    path="/"
+    element={showLogin?
+      (isAuthenticated ? (
+        <Navigate to="/mainpage" />
+      ) : (
+        <Login onLogin={handleLogin} toggleSignup={toggleSignup} />
+      )):
+      (isAuthenticated ? (
+        <Navigate to="/mainpage" />
+      ) : (
+        <Signup onLogin={handleLogin} toggleSignup={toggleSignup} />
+      ))
+    }
+  />
+  <Route path="/signup" element={<Signup toggleSignup={toggleSignup} />} />
+  <Route
+    path="/mainpage"
+    element={isAuthenticated ? <Mainpage onLogout={handleLogout} /> : <Navigate to="/" />}
+  />
+  <Route
+    path="/admin"
+    element={isAuthenticated ? <Admin /> : <Navigate to="/" />}
+  />
+  <Route
+    path="/blog"
+    element={isAuthenticated ? <Blog /> : <Navigate to="/" />}
+  />
+</Routes>
+
+</div>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,101 @@
+/* Blog.css */
+.blog-conent{
+  box-shadow:0 4px 4px 0 rgba(0,0,0,0,0.2);
+  transition:0.3s;
+}
+.heading-blog{
+  padding:2px 10px;
+}
+/* Define styles for the blog-post class */
+.blog-post {
+  border: 3px solid #9e5252; /* Add a border */
+  padding: 10px; /* Add some padding */
+  margin-bottom: 20px; /* Add margin between posts */
+  background-color: #339da0; /* Add a background color */
+  max-width: 400px; /* Set a maximum width for the card */
+  width: 60%; /* Ensure the card takes the full width within the maximum */
+  box-sizing: border-box;
+  margin-left: 200px;
+  /* height:px ; */
+  
+}
+
+/* Define styles for the h3 element within the blog-post class */
+.blog-post h3 {
+  font-size: 24px; /* Set the font size for post titles */
+  margin-top: 0; /* Remove default margin for h3 */
+}
+
+/* Define styles for the p element within the blog-post class */
+.blog-post p {
+  font-size: 16px; /* Set the font size for post descriptions */
+  margin-top: 10px; /* Add some space between the title and description */
+}
+
+/* Define styles for the like-button class within the blog-post class */
+.blog-post .like-button {
+  background-color: transparent; /* Make the button background transparent */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  margin-top: 10px; /* Add some space between the description and the button */
+  color: #ee0f0f;
+}
+
+/* Define styles for the FontAwesome icon within the like-button class */
+.blog-post .like-button .fa-heart {
+  margin-right: 5px; /* Add some space between the icon and the like count */
+}
+
+  
+  /* CSS for comments section */
+.comments {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.comment {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.comment p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* CSS for comment input */
+.comment-input {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.comment-input input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.comment-input button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.comment-input button:hover {
+  background-color: #0056b3;
+}
