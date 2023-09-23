@@ -108,7 +108,7 @@ function Login(props) {
           Don't have an account?{' '}<span
           className='login-span' onClick={()=>{props.toggleSignup()}} style={{cursor:'pointer'}}>sign up</span>
         </p>
-      </form>
+      <h1>OR</h1>
       <div className='google-button'>
       <GoogleLoginButton
         clientId="522578773347-0n9hj8qpv2qig1mf7r5bb3tn5gu6n8ao.apps.googleusercontent.com"
@@ -116,6 +116,7 @@ function Login(props) {
         onFailure={(error) => console.error('Google login failed:', error)}
       />
     </div>
+    </form>
        <div className="login-error-message">{loginError}</div>
     </div>
   );
