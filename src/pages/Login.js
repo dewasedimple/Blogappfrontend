@@ -2,9 +2,7 @@ import React, {  useState } from 'react';
  import './Login.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-// import Mainpage from '../components/mainpage';
-// import './App.css';
-
+import { GoogleLoginButton } from '@react-oauth/google';
 
 function Login(props) {
   
@@ -77,6 +75,14 @@ function Login(props) {
 
   };
 
+  const handleGoogleLogin = async () => {
+    try {
+      await signIn(); // Trigger Google login
+    } catch (error) {
+      console.error('Google login failed:', error);
+    }
+  };
+
   return (
     <div className="login-container">
       <h2 className='login-heading'>Login</h2>
@@ -103,6 +109,12 @@ function Login(props) {
           className='login-span' onClick={()=>{props.toggleSignup()}} style={{cursor:'pointer'}}>sign up</span>
         </p>
       </form>
+      <GoogleLoginButton
+        clientId="522578773347-0n9hj8qpv2qig1mf7r5bb3tn5gu6n8ao.apps.googleusercontent.com"
+        onSuccess={(user) => handleGoogleLogin(user)}
+        onFailure={(error) => console.error('Google login failed:', error)}
+      />
+    
        <div className="login-error-message">{loginError}</div>
     </div>
   );
