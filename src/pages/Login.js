@@ -109,12 +109,13 @@ function Login(props) {
           className='login-span' onClick={()=>{props.toggleSignup()}} style={{cursor:'pointer'}}>sign up</span>
         </p>
       </form>
+      <div className='google-button'>
       <GoogleLoginButton
         clientId="522578773347-0n9hj8qpv2qig1mf7r5bb3tn5gu6n8ao.apps.googleusercontent.com"
         onSuccess={(user) => handleGoogleLogin(user)}
         onFailure={(error) => console.error('Google login failed:', error)}
       />
-    
+    </div>
        <div className="login-error-message">{loginError}</div>
     </div>
   );
