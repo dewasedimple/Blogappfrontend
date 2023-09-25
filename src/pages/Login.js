@@ -76,7 +76,7 @@ function Login(props) {
   };
 
   const handleGooglelogin=()=>{
-    window.location.href='https://blog-application-lnfd.onrender.com/auth/google'
+    window.location.href='https://blog-frontend-b511.onrender.com/auth/google'
   }
 
   return (
