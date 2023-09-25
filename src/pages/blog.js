@@ -5,7 +5,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import './blog.css';
 
 function Blog() {
-  const [post, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
   const [blogData, setBlogData] = useState([]);
   // const [activeSection, setActiveSection] = useState('blog'); // Initialize to 'blog'
   const [newComment, setNewComment] = useState('');

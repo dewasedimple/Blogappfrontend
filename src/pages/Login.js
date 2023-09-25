@@ -104,7 +104,7 @@ function Login(props) {
           Don't have an account?{' '}<span
           className='login-span' onClick={()=>{props.toggleSignup()}} style={{cursor:'pointer'}}>sign up</span>
         </p>
-      <h1>OR</h1>
+      <h4>OR</h4>
       
     </form>
        <div className="login-error-message">{loginError}</div>
